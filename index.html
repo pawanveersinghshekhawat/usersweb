@@ -1,0 +1,1200 @@
+<html>
+
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>userswebsite</title>
+</head>
+
+
+<body>
+    <div class="container-fluid">
+        <div class="row load" id="loader">
+            <div class="d-flex justify-content-center">
+
+                <img src="04-spinner.gif" class="loader" alt="" role="status">
+
+
+            </div>
+        </div>
+        <div class="row firstrow topheader">
+            <div class="col-3 mt-4">
+                <div class="row">
+                    <div class="col-2">
+                        <img src="user logo.webp" class="logo" alt="">
+                    </div>
+                    <div class="col-7 logotext">
+                        <h5>Information</h5>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-8 mt-4">
+                <div class="row">
+
+                    <div class="col-8">
+                        <div class="row">
+                            <div class="col-1 search-icon">
+                                <i class="fa fa-search" aria-hidden="true"></i>
+                            </div>
+                            <div class="col-11">
+                                <input type="text" class="form-control search" placeholder="search user name"
+                                    onkeyup="filter()" id="search">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <select id="working" onchange="filter()" id="working" class="form-select search">
+                        </select>
+                    </div>
+                    <div class="col-2">
+                        <select id="home" onchange="filter()" id="home" class="form-select search">
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row ">
+            <div class="col-10 mt-4 ms-4 allfilter">
+                <h5><i class="fa fa-filter" aria-hidden="true"></i> All filters</h5>
+            </div>
+        </div>
+        <div class="row firstrow datarow">
+            <div class="col-3 mt-4 filrow">
+                <div class="row filterrow">
+                    <div class="col-12 ms-4 mt-4 ">
+                        <header>Birth of date</header>
+                        <div class="row  mt-2">
+                            <div class="col-5">
+                                <input type="date" class="form-control" onchange="filter()" id="date1">
+                            </div>
+                            <div class="col-5">
+                                <input type="date" class="form-control" onchange="filter()" id="date2">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 ms-4 mt-4 ">
+                        <header>Gender</header>
+                        <div class="row mt-2">
+                            <ul class="gender-list">
+                                <li>
+                                    <input type="radio" class="btn-check Gender" onclick="filter()" name="Gender"
+                                        value="male" id="male" autocomplete="off">
+                                    <label class="btn btn-outline-success male" for="male">Male <i class="fa fa-mars"
+                                            aria-hidden="true"></i>
+                                    </label>
+
+                                </li>
+
+                                <li class="mt-2">
+                                    <input type="radio" class="btn-check Gender" onclick="filter()" name="Gender"
+                                        value="female" id="female" autocomplete="off">
+                                    <label class="btn btn-outline-danger" for="female">Female <i class="fa fa-venus"
+                                            aria-hidden="true"></i> </label>
+
+                                </li>
+
+                            </ul>
+
+                        </div>
+                    </div>
+                    <div class="col-12 ms-4 mt-3 ">
+                        <header>Blood group</header>
+                        <div class="row mt-2">
+                            <ul class="bloodGroup">
+                                <li class="mt-1">
+                                    <div>
+                                        <div class="form-check  form-switch">
+                                            <input class="form-check-input bloodcheck" onclick="filter()"
+                                                type="checkbox" id="A+" value="A+">
+                                            <label class="form-check-label" for="A+">A+</label>
+                                        </div>
+
+                                    </div>
+                                </li>
+                                <li class="mt-1">
+                                    <div>
+                                        <div class="form-check  form-switch">
+                                            <input class="form-check-input bloodcheck" onclick="filter()"
+                                                type="checkbox" id="B+" value="B+">
+                                            <label class="form-check-label" for="B+">B+</label>
+                                        </div>
+
+                                    </div>
+                                </li>
+                                <li class="mt-1">
+                                    <div>
+                                        <div class="form-check  form-switch">
+                                            <input class="form-check-input bloodcheck" onclick="filter()"
+                                                type="checkbox" id="AB−" value="AB−">
+                                            <label class="form-check-label" for="AB−">AB−</label>
+                                        </div>
+
+                                    </div>
+                                </li>
+                                <li class="mt-1">
+                                    <div>
+                                        <div class="form-check  form-switch">
+                                            <input class="form-check-input bloodcheck" onclick="filter()"
+                                                type="checkbox" id="A−" value="A−">
+                                            <label class="form-check-label" for="A−">A−</label>
+                                        </div>
+
+                                    </div>
+                                </li>
+                                <li class="mt-1">
+                                    <div>
+                                        <div class="form-check  form-switch">
+                                            <input class="form-check-input bloodcheck" onclick="filter()"
+                                                type="checkbox" id="B−" value="B−">
+                                            <label class="form-check-label" for="B−">B−</label>
+                                        </div>
+
+                                    </div>
+                                </li>
+                                <li class="mt-1">
+                                    <div>
+                                        <div class="form-check  form-switch">
+                                            <input class="form-check-input bloodcheck" onclick="filter()"
+                                                type="checkbox" id="O+" value="O+">
+                                            <label class="form-check-label" for="O+">O+</label>
+                                        </div>
+
+                                    </div>
+                                </li>
+                                <li class="mt-1">
+                                    <div>
+                                        <div class="form-check  form-switch">
+                                            <input class="form-check-input bloodcheck" onclick="filter()"
+                                                type="checkbox" id="O−" value="O−">
+                                            <label class="form-check-label" for="O−">O−</label>
+                                        </div>
+
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-12 ms-4 mt-3">
+                        <header>Hair color</header>
+                        <div class="row mt-2">
+                            <ul class="bloodGroup">
+                                <li class="mt-1">
+                                    <div>
+                                        <div class="form-check  form-switch">
+                                            <input class="form-check-input blond haircol" onclick="filter()"
+                                                type="checkbox" value="Blond" id="Blond">
+                                            <label class="form-check-label" for="Blond">Blond</label>
+                                        </div>
+
+                                    </div>
+                                </li>
+                                <li class="mt-1">
+                                    <div>
+                                        <div class="form-check  form-switch">
+                                            <input class="form-check-input check2 haircol" onclick="filter()"
+                                                type="checkbox" value="Auburn" id="Auburn">
+                                            <label class="form-check-label" for="Auburn">Auburn</label>
+                                        </div>
+
+                                    </div>
+                                </li>
+
+                                <li class="mt-1">
+                                    <div>
+                                        <div class="form-check  form-switch">
+                                            <input class="form-check-input check3 haircol" onclick="filter()"
+                                                type="checkbox" value="Chestnut" id="Chestnut">
+                                            <label class="form-check-label" for="Chestnut">Chestnut</label>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        <div class="form-check  form-switch">
+                                            <input class="form-check-input check1 haircol" onclick="filter()"
+                                                type="checkbox" value="Brown" id="Brown">
+                                            <label class="form-check-label" for="Brown">Brown</label>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="mt-1">
+                                    <div>
+                                        <div class="form-check form-switch">
+                                            <input class="form-check-input check4 haircol" onclick="filter()"
+                                                type="checkbox" value="Black" id="Black">
+                                            <label class="form-check-label" for="Black">Black</label>
+                                        </div>
+
+                                    </div>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-12 ms-4 mt-3">
+                        <header>Eye color</header>
+                        <div class="row mt-2">
+                            <ul class="bloodGroup">
+
+                                <li class="mt-1">
+                                    <div>
+                                        <div class="form-check form-switch">
+                                            <input class="form-check-input check5 eyecol" onclick="filter()"
+                                                type="checkbox" id="Green" value="Green">
+                                            <label class="form-check-label" for="Green">Green</label>
+                                        </div>
+
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        <div class="form-check  form-switch">
+                                            <input class="form-check-input check6 eyecol" onclick="filter()"
+                                                type="checkbox" id="Brown1" value="Brown">
+                                            <label class="form-check-label" for="Brown1">Brown</label>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        <div class="form-check  form-switch">
+                                            <input class="form-check-input check7 eyecol" onclick="filter()"
+                                                type="checkbox" id="Gray" value="Gray">
+                                            <label class="form-check-label" for="Gray">Gray</label>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        <div class="form-check  form-switch">
+                                            <input class="form-check-input check8 eyecol" onclick="filter()"
+                                                type="checkbox" id="Amber" value="Amber">
+                                            <label class="form-check-label" for="Amber">Amber</label>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        <div class="form-check  form-switch">
+                                            <input class="form-check-input check9 eyecol" onclick="filter()"
+                                                type="checkbox" id="Blue" value="Blue">
+                                            <label class="form-check-label" for="Blue">Blue</label>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-9 mt-4 userdatarow">
+                <div class="row" id="show-users">
+
+                </div>
+                <div class="row mb-3 mt-4 paginationrow">
+                    <div class="col-4">
+
+                    </div>
+                    <div class="col-5 ">
+                        <nav aria-label="Page navigation example">
+                            <ul class="pagination ms-5" id="pagination">
+
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12">
+
+                <!-- Modal -->
+                <div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-xl">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">User details</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body modal-bg">
+                                <div class="row ">
+                                    <div class="col-12" id="popup-image">
+
+                                    </div>
+                                    <div class="col-12 text-center" id="popup-fullname">
+
+                                    </div>
+                                </div>
+                                <div class="row ">
+                                    <nav>
+                                        <div class="nav nav-tabs " id="nav-tab" role="tablist">
+                                            <button class="nav-link active " id="nav-home-tab" data-bs-toggle="tab"
+                                                data-bs-target="#nav-home" type="button" role="tab"
+                                                aria-controls="nav-home" aria-selected="true">Personal details</button>
+                                            <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab"
+                                                data-bs-target="#nav-profile" type="button" role="tab"
+                                                aria-controls="nav-profile" aria-selected="false">Bank details</button>
+                                            <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab"
+                                                data-bs-target="#nav-contact" type="button" role="tab"
+                                                aria-controls="nav-contact" aria-selected="false">Company
+                                                details</button>
+                                        </div>
+                                    </nav>
+                                    <div class="tab-content input-bg tabs" id="nav-tabContent">
+                                        <div class="tab-pane fade show active" id="nav-home" role="tabpanel"
+                                            aria-labelledby="nav-home-tab">
+                                            <div class="row mt-3 ms-1">
+                                                <div class="col-6 mt-1">
+                                                    <div class="row">
+                                                        <div class="col-2 mt-1">
+                                                            Name
+                                                        </div>
+                                                        <div class="col-8">
+                                                            <input type="text " class="form-control input-bg" disabled
+                                                                id="name">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="row mt-3">
+                                                        <div class="col-2 mt-1">
+                                                            Birth date
+                                                        </div>
+                                                        <div class="col-8">
+                                                            <input type="text" class="form-control" disabled id="birth">
+                                                        </div>
+                                                    </div>
+                                                    <div class="row mt-3">
+                                                        <div class="col-2 mt-1">
+                                                            Phone
+                                                        </div>
+                                                        <div class="col-8">
+                                                            <input type="text" class="form-control" disabled id="phone">
+                                                        </div>
+                                                    </div>
+                                                    <div class="row mt-3">
+                                                        <div class="col-2 mt-1 ">
+                                                            Email
+                                                        </div>
+                                                        <div class="col-8">
+                                                            <input type="text " class="form-control input-bg" disabled
+                                                                id="email">
+                                                        </div>
+                                                    </div>
+                                                    <div class="row mt-3">
+                                                        <div class="col-2 mt-1 ">
+                                                            password
+                                                        </div>
+                                                        <div class="col-8">
+                                                            <input type="text " class="form-control input-bg" disabled
+                                                                id="password">
+                                                        </div>
+                                                    </div>
+                                                    <div class="row mt-3">
+                                                        <div class="col-2 mt-1 mb-4">
+                                                            Address
+                                                        </div>
+                                                        <div class="col-8">
+                                                            <input type="text" class="form-control" disabled
+                                                                id="address">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-6 mt-1 mb-3">
+                                                    <div class="row">
+                                                        <div class="col-6">
+                                                            <div class="row">
+                                                                <div class="col-6 mt-1 ">
+                                                                    Blood group
+                                                                </div>
+                                                                <div class="col-3">
+                                                                    <input type="text " class="form-control input-bg"
+                                                                        disabled id="bloodGroup">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-6">
+                                                            <div class="row">
+                                                                <div class="col-4 mt-1 ">
+                                                                    Age
+                                                                </div>
+                                                                <div class="col-3 ">
+                                                                    <input type="text" class="form-control" disabled
+                                                                        id="age">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="row mt-3">
+                                                        <div class="col-6">
+                                                            <div class="row">
+                                                                <div class="col-6 mt-1">
+                                                                    Height
+                                                                </div>
+                                                                <div class="col-4">
+                                                                    <input type="text" class="form-control" disabled
+                                                                        id="height">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-6">
+                                                            <div class="row">
+                                                                <div class="col-4 mt-1">
+                                                                    Weight
+                                                                </div>
+                                                                <div class="col-4">
+                                                                    <input type="text" class="form-control" disabled
+                                                                        id="weight">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row mt-3">
+                                                        <div class="col-6">
+                                                            <div class="row">
+                                                                <div class="col-6 mt-1">
+                                                                    Hair color
+                                                                </div>
+                                                                <div class="col-6">
+                                                                    <input type="text" class="form-control" disabled
+                                                                        id="hair">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-6">
+                                                            <div class="row">
+                                                                <div class="col-4 mt-1">
+                                                                    Eye color
+                                                                </div>
+                                                                <div class="col-6">
+                                                                    <input type="text" class="form-control" disabled
+                                                                        id="eye">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row mt-3">
+                                                        <div class="col-6">
+                                                            <div class="row">
+                                                                <div class="col-6 mt-1">
+                                                                    Gender
+                                                                </div>
+                                                                <div class="col-6">
+                                                                    <input type="text" class="form-control" disabled
+                                                                        id="gender">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-6">
+                                                            <div class="row">
+                                                                <div class="col-3 mt-1">
+                                                                    City
+                                                                </div>
+                                                                <div class="col-7">
+                                                                    <input type="text" class="form-control" disabled
+                                                                        id="city">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row mt-3">
+                                                        <div class="col-6">
+                                                            <div class="row">
+                                                                <div class="col-6 mt-1">
+                                                                    Postal code
+                                                                </div>
+                                                                <div class="col-6">
+                                                                    <input type="text" class="form-control" disabled
+                                                                        id="postalCode">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-6">
+                                                            <div class="row">
+                                                                <div class="col-3 mt-1">
+                                                                    State
+                                                                </div>
+                                                                <div class="col-7">
+                                                                    <input type="text" class="form-control" disabled
+                                                                        id="state">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                    <div class="row mt-3">
+                                                        <div class="col-3 mt-1">
+                                                            University
+                                                        </div>
+                                                        <div class="col-8">
+                                                            <input type="text" class="form-control" disabled
+                                                                id="university">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane fade" id="nav-profile" role="tabpanel"
+                                            aria-labelledby="nav-profile-tab">
+                                            <div class="row mt-3 ms-1 mb-3">
+                                                <div class="col-6 mt-1">
+                                                    <div class="row">
+                                                        <div class="col-2 mt-1">
+                                                            Card expire
+                                                        </div>
+                                                        <div class="col-9">
+                                                            <input type="text " class="form-control input-bg" disabled
+                                                                id="card">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="row mt-3">
+                                                        <div class="col-2 mt-1">
+                                                            Card type
+                                                        </div>
+                                                        <div class="col-9">
+                                                            <input type="text" class="form-control" disabled
+                                                                id="cardType">
+                                                        </div>
+                                                    </div>
+                                                    <div class="row mt-3">
+                                                        <div class="col-2 mt-1">
+                                                            Currency
+                                                        </div>
+                                                        <div class="col-9">
+                                                            <input type="text" class="form-control" disabled
+                                                                id="currency">
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                                <div class="col-6 mt-1 mb-5">
+                                                    <div class="row ">
+                                                        <div class="col-3 mt-1">
+                                                            Card number
+                                                        </div>
+                                                        <div class="col-8">
+                                                            <input type="text" class="form-control" disabled
+                                                                id="cardNumber">
+                                                        </div>
+                                                    </div>
+                                                    <div class="row mt-3">
+                                                        <div class="col-3 mt-1 ">
+                                                            Iban
+                                                        </div>
+                                                        <div class="col-8">
+                                                            <input type="text " class="form-control input-bg" disabled
+                                                                id="iban">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane fade" id="nav-contact" role="tabpanel"
+                                            aria-labelledby="nav-contact-tab">
+                                            <div class="row mt-3 ms-1">
+                                                <div class="col-6 mt-1">
+                                                    <div class="row ">
+                                                        <div class="col-2 mt-1">
+                                                            Username
+                                                        </div>
+                                                        <div class="col-8">
+                                                            <input type="text" class="form-control" disabled
+                                                                id="username">
+                                                        </div>
+                                                    </div>
+                                                    <div class="row mt-3">
+                                                        <div class="col-2 mt-1">
+                                                            User agent
+                                                        </div>
+                                                        <div class="col-8">
+                                                            <input type="text" class="form-control" disabled
+                                                                id="userAgent">
+                                                        </div>
+                                                    </div>
+                                                    <div class="row mt-3">
+                                                        <div class="col-2 mt-1">
+                                                            Ip add
+                                                        </div>
+                                                        <div class="col-8">
+                                                            <input type="text" class="form-control" disabled id="ip">
+                                                        </div>
+                                                    </div>
+                                                    <div class="row mt-3">
+                                                        <div class="col-2 mt-1">
+                                                            Mac add
+                                                        </div>
+                                                        <div class="col-8">
+                                                            <input type="text" class="form-control" disabled id="mac">
+                                                        </div>
+                                                    </div>
+                                                    <div class="row mt-3">
+                                                        <div class="col-2 mt-1">
+                                                            Domain
+                                                        </div>
+                                                        <div class="col-8">
+                                                            <input type="text" class="form-control" disabled
+                                                                id="domain">
+                                                        </div>
+                                                    </div>
+                                                    <div class="row mt-3">
+                                                        <div class="col-2 mt-1">
+                                                            Ssn
+                                                        </div>
+                                                        <div class="col-8">
+                                                            <input type="text" class="form-control" disabled id="ssn">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-6 mt-1 mb-3">
+                                                    <div class="row">
+                                                        <div class="col-3 mt-1 ">
+                                                            Company name
+                                                        </div>
+                                                        <div class="col-8">
+                                                            <input type="text " class="form-control input-bg" disabled
+                                                                id="company-name">
+                                                        </div>
+                                                    </div>
+                                                    <div class="row mt-3">
+                                                        <div class="col-3 mt-1 ">
+                                                            Company title
+                                                        </div>
+                                                        <div class="col-8">
+                                                            <input type="text " class="form-control input-bg" disabled
+                                                                id="company-title">
+                                                        </div>
+                                                    </div>
+                                                    <div class="row mt-3">
+                                                        <div class="col-3 mt-1 ">
+                                                            Department
+                                                        </div>
+                                                        <div class="col-8">
+                                                            <input type="text " class="form-control input-bg" disabled
+                                                                id="department">
+                                                        </div>
+                                                    </div>
+                                                    <div class="row mt-3">
+                                                        <div class="col-3 mt-1 ">
+                                                            Address
+                                                        </div>
+                                                        <div class="col-8">
+                                                            <input type="text " class="form-control input-bg" disabled
+                                                                id="address-company">
+                                                        </div>
+                                                    </div>
+                                                    <div class="row mt-3">
+                                                        <div class="col-3 mt-1 ">
+                                                            City
+                                                        </div>
+                                                        <div class="col-8">
+                                                            <input type="text " class="form-control input-bg" disabled
+                                                                id="company-city">
+                                                        </div>
+                                                    </div>
+                                                    <div class="row mt-3">
+                                                        <div class="col-3 mt-1 ">
+                                                            Ein
+                                                        </div>
+                                                        <div class="col-8">
+                                                            <input type="text " class="form-control input-bg" disabled
+                                                                id="ein">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+
+        loadusers()
+
+
+        function filter(filterskip, fiterlimit) {
+
+            document.getElementById('loader').style.display = 'block'
+            var gender = document.getElementsByClassName('Gender')
+            var gendernm = []
+            for (let g = 0; g < gender.length; g++) {
+                if (gender[g].checked == true) {
+                    gendernm.push(gender[g].value)
+                }
+
+
+            }
+
+            var searchVal = document.getElementById('search').value.toLowerCase()
+            var working_city = document.getElementById('working').value
+            var home_city = document.getElementById('home').value
+            var start_date = document.getElementById('date1').value
+            var end_date = document.getElementById('date2').value
+
+            if (start_date && end_date) {
+
+            } else if (end_date) {
+                start_date = '1900-01-01'
+            } else if (start_date) {
+                end_date = '9999-12-31'
+            }
+
+            const http_req = new XMLHttpRequest();
+            http_req.onload = function () {
+                var results = JSON.parse(this.responseText)
+
+
+                var filteredData = results['users']
+
+                if (searchVal || working_city || home_city) {
+                    if (searchVal) {
+                        filteredData = filteredData.filter(function (user) {
+                            return (user['firstName'].substr(0, searchVal.length).toLowerCase() === searchVal.substr(0, searchVal.length)
+                                || user['lastName'].substr(0, searchVal.length).toLowerCase() === searchVal.substr(0, searchVal.length)
+                                || user['maidenName'].substr(0, searchVal.length).toLowerCase() === searchVal.substr(0, searchVal.length)
+                            );
+                        });
+
+                    }
+                    if (working_city) {
+                        filteredData = filteredData.filter(function (user) {
+                            return (user['company']['address']['city'] === working_city
+
+                            );
+                        });
+                    }
+                    if (home_city) {
+                        filteredData = filteredData.filter(function (user) {
+                            return (user['address']['city'] === home_city
+
+                            );
+                        });
+                    }
+                } if (start_date || end_date || gendernm || bloodcheck || haircol || eyecol) {
+                    if (start_date) {
+                        filteredData = filteredData.filter(function (user) {
+                            return (user['birthDate'] >= start_date
+
+                            );
+                        });
+                    }
+                    if (end_date) {
+                        filteredData = filteredData.filter(function (user) {
+                            return (user['birthDate'] <= end_date
+
+                            );
+                        });
+                    }
+                    if (gendernm == 'male') {
+                        filteredData = filteredData.filter(function (user) {
+                            return (user['gender'] === 'male'
+
+                            );
+                        });
+                    }
+                    if (gendernm == 'female') {
+                        filteredData = filteredData.filter(function (user) {
+                            return (user['gender'] === 'female'
+
+                            );
+                        });
+                    }
+                    var bloodgroup = []
+                    var bloodcheck = document.getElementsByClassName('bloodcheck')
+                    for (b = 0; b < bloodcheck.length; b++) {
+                        if (bloodcheck[b].checked === true) {
+                            bloodgroup.push(bloodcheck[b].value)
+
+                        }
+                    }
+                    if (bloodgroup.length > 0) {
+                        filteredData = filteredData.filter(function (user) {
+                            for (bg = 0; bg < bloodgroup.length; bg++) {
+                                if (user['bloodGroup'] === bloodgroup[bg]) {
+                                    return true;
+                                }
+                            }
+
+                        });
+                    }
+
+                    console.log(bloodgroup)
+
+
+                    var haircolor = []
+                    var haircol = document.getElementsByClassName('haircol')
+                    for (h = 0; h < haircol.length; h++) {
+                        if (haircol[h].checked === true) {
+                            haircolor.push(haircol[h].value)
+                        }
+                    }
+                    if (haircolor.length > 0) {
+                        filteredData = filteredData.filter(function (user) {
+                            for (h = 0; h < haircolor.length; h++) {
+                                if (user['hair']['color'] === haircolor[h]) {
+                                    return true;
+                                }
+                            }
+
+                        });
+                    }
+
+
+                    var eyecolor = []
+                    var eyecol = document.getElementsByClassName('eyecol')
+                    for (let e = 0; e < eyecol.length; e++) {
+                        if (eyecol[e].checked == true) {
+                            eyecolor.push(eyecol[e].value)
+                        }
+                    }
+                    if (eyecolor.length > 0) {
+                        filteredData = filteredData.filter(function (user) {
+                            for (e = 0; e < eyecolor.length; e++) {
+                                if (user['eyeColor'] === eyecolor[e]) {
+                                    return true;
+                                }
+                            }
+
+                        });
+                    }
+
+
+
+                }
+                if (!filterskip) {
+                    filterskip = 0
+                }
+                if (!fiterlimit) {
+                    fiterlimit = 9
+                }
+                if (fiterlimit > filteredData.length) {
+                    fiterlimit = filteredData.length
+                }
+
+                var users = ''
+
+                for (x = filterskip; x < fiterlimit; x++) {
+                    console.log(filteredData)
+
+                    var fullname = filteredData[x]['firstName'] + ' ' + filteredData[x]['maidenName'] + ' ' + filteredData[x]['lastName']
+                    users += '<div class="col-4 mt-4">'
+                    users += '<div class="card">'
+                    users += '<img src="' + filteredData[x]['image'] + '" class="card-img-top">'
+                    users += '<div class="card-body">'
+                    users += '<h5 class="card-title">' + fullname + '</h5>'
+                    users += '<h6 class="card-title">' + filteredData[x]['gender'] + '</h6>'
+                    users += '<a href="mailto:' + filteredData[x]['email'] + '"  class="btn  emailbtn">Email' + '  ' + '<i class="fa fa-envelope" aria-hidden="true"></i></a>'
+                    users += '<button class="btn  ms-3 detailbtn" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="details(' + filteredData[x]['id'] + ')">Details' + '  ' + '<i class="fa fa-external-link" aria-hidden="true"></i></button>'
+                    users += '</div></div></div>'
+
+
+                }
+                document.getElementById('show-users').innerHTML = users
+
+                var filterperpage = 9
+
+                var fiteroffset = 0
+                var filterpagelimit = Math.ceil(filteredData.length / filterperpage)
+
+
+                console.log(filterpagelimit)
+                console.log(filterskip, fiterlimit)
+                var filteroffset = 0
+                var pagination = ''
+                for (let p = filteroffset; p < filterpagelimit; p++) {
+                    if (filteroffset == filterskip) {
+                        pagination += '<li class="page-item active"><button class="page-link" onclick="filterpagechange(' + filteroffset + ',' + filterperpage + ')">' + Number(p + 1) + '</button></li>'
+
+                    } else {
+                        pagination += '<li class="page-item "><button class="page-link" onclick="filterpagechange(' + filteroffset + ',' + filterperpage + ')">' + Number(p + 1) + '</button></li>'
+
+                    }
+                    filteroffset += 9
+                    filterperpage += 9
+                }
+                document.getElementById('pagination').innerHTML = pagination
+                document.getElementById('loader').style.display = 'none'
+
+            }
+            http_req.open('GET', 'https://dummyjson.com/users?limit=100&skip=0', true);
+            http_req.send();
+
+        }
+
+        function filterpagechange(filteroffset, filterperpage) {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+            filter(filteroffset, filterperpage)
+        }
+
+
+        function loadusers(skip, pre, next) {
+
+            document.getElementById('loader').style.display = 'block'
+            const http_req = new XMLHttpRequest();
+            http_req.onload = function () {
+                var results = JSON.parse(this.responseText)
+
+                var users = ''
+
+                for (x = 0; x < results['users'].length; x++) {
+                    // (WorkingValue==results['users'][x]['company']['address']['city'])
+                    var fullname = results['users'][x]['firstName'] + ' ' + results['users'][x]['maidenName'] + ' ' + results['users'][x]['lastName']
+                    users += '<div class="col-4 mt-4">'
+                    users += '<div class="card">'
+                    users += '<img src="' + results['users'][x]['image'] + '" class="card-img-top">'
+                    users += '<div class="card-body">'
+                    users += '<h5 class="card-title">' + fullname + '</h5>'
+                    users += '<h6 class="card-title">' + results['users'][x]['gender'] + '</h6>'
+                    users += '<a href="mailto:' + results['users'][x]['email'] + '"  class="btn  emailbtn">Email' + '  ' + '<i class="fa fa-envelope" aria-hidden="true"></i></a>'
+                    users += '<button class="btn  ms-3 detailbtn" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="details(' + results['users'][x]['id'] + ')">Details' + '  ' + '<i class="fa fa-external-link" aria-hidden="true"></i></button>'
+                    users += '</div></div></div>'
+
+
+                }
+                document.getElementById('show-users').innerHTML = users
+
+
+
+                var per_page = 9
+                var page_limit = 5
+                var total_pages = Math.ceil(results['total'] / per_page)
+
+                var active_page = Number(skip / per_page)
+                var start_point = 0
+                var end_point = page_limit
+                if (active_page >= 3) {
+                    start_point = active_page - 2
+                    end_point = active_page + 3
+                }
+
+                if (end_point > total_pages) {
+                    start_point = total_pages - 5
+                    end_point = total_pages
+                }
+                var page_htm = ''
+                var pre = skip - 9
+                if (pre > -9) {
+                    page_htm = '<li class="page-item "><button class="page-link" onclick="pre(' + pre + ')">Previous</button></li>'
+
+                }
+                for (p = start_point; p < end_point; p++) {
+                    offset = per_page * p
+
+                    if (offset == skip) {
+                        page_htm += '<li class="page-item active"><button class="page-link" onclick="pageChange(' + offset + ')">' + Number(p + 1) + '</button></li>'
+                    } else {
+                        page_htm += '<li class="page-item "><button class="page-link" onclick="pageChange(' + offset + ')">' + Number(p + 1) + '</button></li>'
+                    }
+                }
+                var next = skip + 9
+
+                console.log(next)
+                var remove_next = per_page * total_pages
+                if (remove_next == next) {
+
+                } else {
+                    page_htm += '<li class="page-item "><button class="page-link" onclick="next(' + next + ')">Next</button></li>'
+
+                }
+                document.getElementById('pagination').innerHTML = page_htm
+
+
+
+                document.getElementById('loader').style.display = 'none'
+
+            }
+            if (!skip) {
+                skip = 0
+            }
+
+
+            http_req.open('GET', 'https://dummyjson.com/users?limit=9&skip=' + skip, true);
+
+            http_req.send();
+        }
+
+        function pre(pre) {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+            loadusers(pre)
+        }
+        function next(next) {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+            loadusers(next)
+        }
+        function pageChange(skip) {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+            loadusers(skip)
+        }
+
+        function details(id) {
+
+            document.getElementById('loader').style.display = 'block'
+
+            const http_req = new XMLHttpRequest();
+            http_req.onload = function () {
+                var results = JSON.parse(this.responseText)
+                // console.log()
+                var popimg = '<img src="' + results['image'] + '" class="popup-img card-img-top">'
+
+                document.getElementById('popup-image').innerHTML = popimg
+                var fullname = results['firstName'] + ' ' + results['maidenName'] + ' ' + results['lastName']
+                var age = results['age']
+                var birth = results['birthDate']
+                var popup_fullname = '<h5 class="card-title">' + fullname + '</h5>'
+                var phone = results['phone']
+                var username = results['username']
+                var bloodGroup = results['bloodGroup']
+                var email = results['email']
+                var password = results['password']
+                var height = results['height']
+                var weight = results['weight']
+                var haircolor = results['hair']['color']
+                var eyecolor = results['eyeColor']
+                var gender = results['gender']
+                var city = results['address']['city']
+                var address = results['address']['address']
+                var postalCode = results['address']['postalCode']
+                var state = results['address']['state']
+                var cardExpire = results['bank']['cardExpire']
+                var cardNumber = results['bank']['cardNumber']
+                var cardType = results['bank']['cardType']
+                var currency = results['bank']['currency']
+                var iban = results['bank']['iban']
+                var company_add = results['company']['address']['address']
+                var company_city = results['company']['address']['city']
+                var company_name = results['company']['name']
+                var company_title = results['company']['title']
+                var university = results['university']
+                var userAgent = results['userAgent']
+                var department = results['company']['department']
+                var ein = results['ein']
+                var ip = results['ip']
+                var mac = results['macAddress']
+                var domain = results['domain']
+                var ssn = results['ssn']
+                document.getElementById('popup-fullname').innerHTML = popup_fullname
+                document.getElementById('name').value = fullname
+                document.getElementById('age').value = age
+                document.getElementById('birth').value = birth
+                document.getElementById('phone').value = phone
+                document.getElementById('username').value = username
+                document.getElementById('bloodGroup').value = bloodGroup
+                document.getElementById('email').value = email
+                document.getElementById('password').value = password
+                document.getElementById('height').value = height
+                document.getElementById('weight').value = weight
+                document.getElementById('hair').value = haircolor
+                document.getElementById('eye').value = eyecolor
+                document.getElementById('gender').value = gender
+                document.getElementById('city').value = city
+                document.getElementById('address').value = address
+                document.getElementById('postalCode').value = postalCode
+                document.getElementById('state').value = state
+                document.getElementById('card').value = cardExpire
+                document.getElementById('cardNumber').value = cardNumber
+                document.getElementById('cardType').value = cardType
+                document.getElementById('currency').value = currency
+                document.getElementById('iban').value = iban
+                document.getElementById('address-company').value = company_add
+                document.getElementById('company-city').value = company_city
+                document.getElementById('company-name').value = company_name
+                document.getElementById('company-title').value = company_title
+                document.getElementById('university').value = university
+                document.getElementById('userAgent').value = userAgent
+                document.getElementById('department').value = department
+                document.getElementById('ein').value = ein
+                document.getElementById('ip').value = ip
+                document.getElementById('mac').value = mac
+                document.getElementById('domain').value = domain
+                document.getElementById('ssn').value = ssn
+                document.getElementById('loader').style.display = 'none'
+
+            }
+
+            http_req.open('GET', 'https://dummyjson.com/users/' + id, true);
+
+            http_req.send();
+        }
+
+
+        newfun()
+        function newfun() {
+
+            var http_req = new XMLHttpRequest();
+            http_req.onload = function () {
+                var results = JSON.parse(this.responseText)
+                var home_city = []
+                var working_city = []
+                var color = []
+                var check = {};
+                var check1 = {};
+                var check3 = {};
+                for (x = 0; x < results['users'].length; x++) {
+                    if (!check[results['users'][x]['address']['city']]) {
+                        check[results['users'][x]['address']['city']] = true;
+                        home_city.push(results['users'][x]['address']['city'])
+                    }
+                    if (!check1[results['users'][x]['company']['address']['city']]) {
+                        check1[results['users'][x]['company']['address']['city']] = true;
+                        working_city.push(results['users'][x]['company']['address']['city'])
+                    }
+                    if (!check3[results['users'][x]['eyeColor']]) {
+                        check3[results['users'][x]['eyeColor']] = true;
+                        color.push(results['users'][x]['eyeColor'])
+                    }
+                }
+                console.log(color)
+                var home_city_option = "<option value=''>Home city</option>"
+
+                for (var x = 0; x < home_city.length; x++) {
+                    if (home_city[x]) {
+                        home_city_option += "<option value='" + home_city[x] + "'>" + home_city[x] + "</option>"
+                    }
+                }
+                document.getElementById('home').innerHTML = home_city_option
+
+
+
+                var working_city_option = "<option value=''>Working city</option>"
+
+
+                for (var x = 0; x < working_city.length; x++) {
+                    if (working_city[x]) {
+                        working_city_option += "<option value='" + working_city[x] + "'>" + working_city[x] + "</option>"
+                    }
+                }
+                document.getElementById('working').innerHTML = working_city_option
+
+
+            }
+            http_req.open('GET', 'https://dummyjson.com/users?limit=100&skip=0', true);
+
+            http_req.send();
+
+        }
+
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
